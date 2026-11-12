@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Северное небо — интерактивный путеводитель для первых наблюдений за звёздным небом.">
+  <meta name="theme-color" content="#07111f">
+  <title>Северное небо — путеводитель по звёздам</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Unbounded:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Северное небо — на главную">
+        <span class="logo-mark" aria-hidden="true">✦</span>
+        <span>Северное<br><b>небо</b></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <a class="active" href="#top">Главная</a>
+        <a href="#objects">Объекты</a>
+        <a href="#guide">Как наблюдать</a>
+        <a href="#about">О проекте</a>
+        <a class="auth-only" href="cabinet.html">Кабинет</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Переключить цветовую тему" title="Сменить тему">
+          <span class="theme-icon" aria-hidden="true">☼</span>
+        </button>
+        <a class="button button-small button-ghost guest-only" href="auth.html">Войти</a>
+        <a class="user-chip auth-only" href="cabinet.html" aria-label="Открыть личный кабинет">
+          <span class="user-avatar" aria-hidden="true"></span>
+          <span class="header-user-name"></span>
+        </a>
+        <button class="button button-small button-ghost auth-only logout-button" type="button">Выйти</button>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Путеводитель для начинающих</p>
+          <h1>Небо ближе,<br>чем <em>кажется</em></h1>
+          <p class="hero-lead">Научитесь находить созвездия, планеты и туманности без сложной техники. Выберите ясную ночь — маршрут мы уже подготовили.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#objects">Выбрать объект <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#guide">Как начать <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-meta" aria-label="Преимущества проекта">
+            <span><b>08</b> объектов</span>
+            <span><b>01</b> вечер для старта</span>
+            <span><b>0₽</b> без телескопа</span>
+          </div>
+        </div>
+
+        <div class="sky-visual reveal" aria-label="Схема северного звёздного неба" role="img">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <span class="star star-main">✦</span>
+          <span class="star star-a">✧</span>
+          <span class="star star-b">✦</span>
+          <span class="star star-c">✧</span>
+          <span class="star star-d">✦</span>
+          <div class="constellation-line line-a"></div>
+          <div class="constellation-line line-b"></div>
+          <div class="constellation-line line-c"></div>
+          <div class="visual-label visual-label-top"><span></span> Полярная звезда</div>
+          <div class="visual-label visual-label-bottom"><span>59° 19′</span> северной широты</div>
+        </div>
+      </div>
+
+      <div class="container conditions-panel reveal" aria-label="Условия для наблюдения">
+        <div class="condition-intro">
+          <span class="pulse-dot"></span>
+          <div><small>Идеальная ночь</small><strong>Три простых условия</strong></div>
+        </div>
+        <div class="condition"><span aria-hidden="true">◔</span><div><small>Луна</small><strong>до 40%</strong></div></div>
+        <div class="condition"><span aria-hidden="true">◎</span><div><small>От города</small><strong>20+ км</strong></div></div>
+        <div class="condition"><span aria-hidden="true">◒</span><div><small>Адаптация глаз</small><strong>20 минут</strong></div></div>
+        <a class="condition-link" href="#guide" aria-label="Перейти к инструкции">→</a>
+      </div>
+    </section>
+
+    <section class="section slider-section" aria-labelledby="night-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Маршрут на вечер</p>
+            <h2 id="night-title">Ночь по шагам</h2>
+          </div>
+          <p>Четыре остановки — от первых сумерек до глубокого космоса.</p>
+        </div>
+
+        <div class="story-slider reveal" aria-roledescription="карусель" aria-label="Этапы ночного наблюдения">
+          <div class="slides" aria-live="polite">
+            <article class="slide active" data-slide="0" aria-hidden="false">
+              <div class="slide-copy">
+                <span class="slide-number">01 / 04</span>
+                <p class="slide-time">21:30 · Синие сумерки</p>
+                <h3>Начните с ориентира</h3>
+                <p>Найдите Большую Медведицу и проведите воображаемую линию через две крайние звезды ковша — она приведёт к Полярной.</p>
+                <a href="#objects" class="text-link">Открыть маршрут <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="slide-art slide-art-one" role="img" aria-label="Большая Медведица и Полярная звезда">
+                <span class="art-caption">URSA MAJOR</span>
+                <span class="art-star s1">✦</span><span class="art-star s2">✦</span><span class="art-star s3">✦</span>
+                <span class="art-star s4">✦</span><span class="art-star s5">✦</span><span class="art-star s6">✦</span>
+              </div>
+            </article>
+
+            <article class="slide" data-slide="1" aria-hidden="true">
+              <div class="slide-copy">
+                <span class="slide-number">02 / 04</span>
+                <p class="slide-time">22:00 · Первый час темноты</p>
+                <h3>Поймайте сезонный свет</h3>
+                <p>Летом ищите звёзды Летнего треугольника, зимой — яркий Орион. Эти фигуры крупные и хорошо видны даже у города.</p>
+                <a href="#objects" class="text-link">Смотреть объекты <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="slide-art slide-art-two" role="img" aria-label="Три звезды Летнего треугольника">
+                <span class="art-caption">SUMMER TRIANGLE</span>
+                <span class="triangle-line t1"></span><span class="triangle-line t2"></span><span class="triangle-line t3"></span>
+                <span class="art-star s1">✦</span><span class="art-star s2">✦</span><span class="art-star s3">✦</span>
+              </div>
+            </article>
+
+            <article class="slide" data-slide="2" aria-hidden="true">
+              <div class="slide-copy">
+                <span class="slide-number">03 / 04</span>
+                <p class="slide-time">23:10 · Глаза привыкли к темноте</p>
+                <h3>Посмотрите за пределы</h3>
+                <p>В бинокль галактика Андромеды выглядит как мягкое овальное облачко. Её свет шёл к нам больше двух миллионов лет.</p>
+                <a href="#objects" class="text-link">Найти Андромеду <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="slide-art slide-art-three" role="img" aria-label="Силуэт галактики Андромеды">
+                <span class="art-caption">M31 · ANDROMEDA</span>
+                <span class="galaxy galaxy-one"></span><span class="galaxy galaxy-two"></span><span class="galaxy-core"></span>
+              </div>
+            </article>
+
+            <article class="slide" data-slide="3" aria-hidden="true">
+              <div class="slide-copy">
+                <span class="slide-number">04 / 04</span>
+                <p class="slide-time">00:30 · Глубокая ночь</p>
+                <h3>Остановитесь и слушайте</h3>
+                <p>Уберите телефон, дайте глазам отдохнуть и посмотрите на Млечный Путь боковым зрением — так его слабые детали заметнее.</p>
+                <a href="#guide" class="text-link">Подготовиться <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="slide-art slide-art-four" role="img" aria-label="Полоса Млечного Пути">
+                <span class="art-caption">MILKY WAY</span>
+                <span class="milky-band"></span><span class="meteor"></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-arrow prev" type="button" aria-label="Предыдущий слайд">←</button>
+            <div class="slider-dots" aria-label="Выбор слайда"></div>
+            <button class="slider-arrow next" type="button" aria-label="Следующий слайд">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section objects-section" id="objects" aria-labelledby="objects-title">
+      <div class="container">
+        <div class="section-heading objects-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Атлас наблюдателя</p>
+            <h2 id="objects-title">Что искать в небе</h2>
+          </div>
+          <p>Начните с объектов уровня «легко», сохраните понравившиеся и соберите свой маршрут.</p>
+        </div>
+
+        <div class="catalog-toolbar reveal">
+          <div class="filter-list" id="filterList" aria-label="Фильтр по категориям">
+            <button class="filter-button active" type="button" data-filter="Все">Все</button>
+            <button class="filter-button" type="button" data-filter="Созвездия">Созвездия</button>
+            <button class="filter-button" type="button" data-filter="Планеты">Планеты</button>
+            <button class="filter-button" type="button" data-filter="Дальний космос">Дальний космос</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Поиск по объектам</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="objectSearch" type="search" placeholder="Найти объект…" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="cards-grid" id="cardsGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span aria-hidden="true">✦</span>
+          <h3>Такого объекта пока нет</h3>
+          <p>Попробуйте другое название или сбросьте фильтр.</p>
+          <button class="button button-ghost" id="resetFilters" type="button">Показать всё</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide-section" id="guide" aria-labelledby="guide-title">
+      <div class="container guide-grid">
+        <div class="guide-copy reveal">
+          <p class="eyebrow"><span></span> Полевой минимум</p>
+          <h2 id="guide-title">Ваш первый выход<br>за звёздами</h2>
+          <p>Телескоп не обязателен. Нужны тёмное место, немного терпения и четыре простых правила.</p>
+          <div class="guide-note">
+            <span aria-hidden="true">!</span>
+            <p><strong>Красный свет бережёт ночное зрение.</strong> Закройте фонарик красной плёнкой или включите ночной режим экрана.</p>
+          </div>
+        </div>
+
+        <ol class="steps-list reveal">
+          <li><span>01</span><div><h3>Проверьте погоду</h3><p>Выбирайте ночь без облаков и тумана. Лучше — за два дня до или после новолуния.</p></div></li>
+          <li><span>02</span><div><h3>Уйдите от фонарей</h3><p>Даже небольшой парк или окраина города покажут в несколько раз больше звёзд.</p></div></li>
+          <li><span>03</span><div><h3>Дайте глазам время</h3><p>Не смотрите на белый экран 20 минут — чувствительность зрения постепенно возрастёт.</p></div></li>
+          <li><span>04</span><div><h3>Начните с большого</h3><p>Сначала найдите знакомую фигуру, затем двигайтесь от неё к более слабым объектам.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-visual reveal" role="img" aria-label="Наблюдатель смотрит на звёздное небо">
+          <div class="horizon"></div>
+          <div class="observer"><span></span></div>
+          <span class="shooting-star"></span>
+          <p>Смотрите вверх.<br>Не спешите.</p>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span></span> О проекте</p>
+          <h2 id="about-title">Не энциклопедия.<br>Точка старта.</h2>
+          <p>«Северное небо» помогает сделать первый осмысленный шаг в любительской астрономии. Здесь нет сложных формул — только заметные объекты, понятные ориентиры и советы, которые работают в реальном поле.</p>
+          <p>Небо меняется каждый сезон, поэтому лучший способ научиться — регулярно выходить и сравнивать увиденное.</p>
+          <div class="about-values">
+            <div><span>01</span><strong>Наблюдайте<br>без спешки</strong></div>
+            <div><span>02</span><strong>Записывайте<br>находки</strong></div>
+            <div><span>03</span><strong>Берегите<br>темноту</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span></span> Коротко о главном</p>
+          <h2 id="faq-title">Частые вопросы</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Нужен ли телескоп для первого наблюдения?<span>+</span></summary>
+            <p>Нет. Невооружённым глазом видны созвездия, яркие планеты, Млечный Путь и метеоры. Бинокль 7×50 или 10×50 станет хорошим следующим шагом.</p>
+          </details>
+          <details>
+            <summary>Почему в городе почти не видно звёзд?<span>+</span></summary>
+            <p>Свет от фонарей рассеивается в атмосфере и создаёт яркий фон. Отъезд на 20–30 км часто меняет картину сильнее, чем покупка телескопа.</p>
+          </details>
+          <details>
+            <summary>Как понять, что яркая точка — планета?<span>+</span></summary>
+            <p>Планеты обычно светят ровнее и мерцают меньше звёзд. Венера и Юпитер заметно ярче большинства объектов вокруг.</p>
+          </details>
+          <details>
+            <summary>Куда сохраняются избранные объекты?<span>+</span></summary>
+            <p>В память вашего браузера. После регистрации избранное отображается в личном кабинете и сохраняется на этом устройстве.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true">✦</span><span>Северное<br><b>небо</b></span></a>
+        <p>Понятный путеводитель<br>по вашему первому небу.</p>
+      </div>
+      <div class="footer-links">
+        <div><h3>Навигация</h3><a href="#objects">Объекты</a><a href="#guide">Как наблюдать</a><a href="#about">О проекте</a></div>
+        <div><h3>Аккаунт</h3><a href="auth.html">Вход и регистрация</a><a href="cabinet.html">Личный кабинет</a><a href="mailto:hello@severnoe-nebo.example">Написать нам</a></div>
+        <div><h3>Мы в сети</h3><a href="#footer">VK</a><a href="#footer">Telegram</a><a href="#footer">YouTube</a></div>
+      </div>
+      <form class="newsletter" id="newsletterForm" novalidate>
+        <h3>Редкие письма<br>о ясных ночах</h3>
+        <label for="newsletterEmail">Ваш email</label>
+        <div class="newsletter-row">
+          <input id="newsletterEmail" type="email" placeholder="you@example.com" required>
+          <button type="submit" aria-label="Подписаться">→</button>
+        </div>
+        <p class="form-message" id="newsletterMessage" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span class="current-year"></span> Северное небо</p>
+      <p>Учебный проект · HTML / CSS / JavaScript</p>
+      <a href="#top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="object-modal" id="objectModal" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" aria-label="Закрыть окно">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
